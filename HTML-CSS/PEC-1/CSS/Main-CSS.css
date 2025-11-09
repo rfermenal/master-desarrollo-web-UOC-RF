@@ -152,6 +152,7 @@ a:hover { /*Ejemplo de Pseudo Classes User Action*/
     color: rgb(226 53 42);
     font-weight: bold;
     text-decoration: none;
+    background-image: none;
     
 }
 
@@ -206,6 +207,12 @@ a[href^="https"]:hover::after { /*Ejemplo de Pseudo Classes User Action + Pseudo
     background-size: 100%;
     background-image: url("../img/external-link-modif.svg");
 }
+
+
+#identificadorPagina a.no-icon::after { /*Al aplicar el estilo indicado arriba para todos los enlaces externos, también afecta el enlace que tenemos en el nombre del autor debajo del título, por lo que creo y aplico una clase extra para que al elemento que lo tenga se le elimine el pseudoelemento y le colocamos un !important para que sobrescriba el estilo. De lo contrario tendría que cambiar el atributo que le estoy aplicando a los enlaces externos y cambiarlos uno a uno.*/
+  content: none !important;
+}
+
 
 
 /*Estilos para Figure y luego meter Vídeos o Imágenes con pie de foto*/
@@ -290,6 +297,7 @@ abbr { /**El cursor debe cambiar a un signo de interrogación (cursor: help)*/
 .autor > figcaption {
     
     margin: 0;
+    font-size: small; !important
     
     
 }

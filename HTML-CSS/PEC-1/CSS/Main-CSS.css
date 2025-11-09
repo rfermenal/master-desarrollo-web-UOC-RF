@@ -1,0 +1,425 @@
+/*CSS General del Proyecto | Alumno Roland Fermenal */
+
+* { /* Estilo General que aplica a todo el proyecto */
+    
+    margin: 0; /*Esto quita el margen que los navegadores aplican por defecto al HTML*/
+    font-family: Verdana, Tahoma, Arial, sans-serif; /*Aplicamos tipo de fuente sin serifa a todas las páginas */
+    
+}
+
+body { /* Estilo aplicado a todo el cuerpo de la página */
+    
+    background-color: rgb(244, 244, 244); /* Aplicamos un gris muy claro como background de toda la página*/
+    
+}
+
+
+/*Estilos a aplicar a títulos y subtítulos, enunciados y textos de las páginas*/
+h1,
+h2,
+h3 {
+    color: rgb(43, 23, 3);
+    margin: 3%;
+}
+
+h4 {
+    
+    font-size: 26px;
+    border-bottom: solid rgb(43, 23, 3);
+    margin: revert;
+    
+}
+
+h5 {
+    
+    font-size: 24px;
+    margin-top: 1%;
+    
+}
+
+
+p {
+    
+    color: rgb(43, 23, 3);
+    margin: 4%;
+    font-size: 16px;
+    line-height: 1.6;
+    
+}
+
+
+/*Estilos para los enlaces*/
+
+a {
+    
+    color: rgb(226 53 42);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 13px;
+    
+}
+
+a:hover { /*Ejemplo de Pseudo Classes User Action*/
+
+    color: rgb(226 53 42 / 0.5);
+    
+}
+
+
+.container { /*Propocionado por la Profesora*/
+    
+    width: 95%;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.logo { /* Estilo aplicado al logo de BIT */
+    
+    display: grid;
+    place-items: center;
+    height: 100px;
+
+}
+
+
+/* Estilo General aplicado al menú superior que los trabajamos con listas = ul */
+
+.TopMenu {
+    
+        list-style-type: none;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 1.6;
+        padding: 0;    
+    
+}
+
+
+
+.TopMenu > li > a { /*Estilos aplicados a a los enlaces del Menú suprior*/
+    
+    color: rgb(43, 23, 3);
+    text-decoration: none;
+    
+}
+
+
+.TopMenu > li > a:hover /*Estilos aplicados cuando el usuario coloque el mouse por encima (hover) de los enlaces que tenemos en el menú superior*/
+ {
+    
+    color: rgb(226, 53, 42);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.TopMenu li.activo a { /*Con esto modificamos color añ Ítem del menú de navegación correspondiente a la página que se visualiza | se le aplicará a los enlaces que esten dentro de los li que tengan la clase activo */
+    color: rgb(226 53 42 / 0.5);
+
+}
+
+
+/* Contenedor del H1 del Artículo y Autor - Cabecera de Página */
+
+#identificadorPagina { /*ID Selector*/
+    
+    margin: 10px;
+    text-align: center;
+}
+
+
+#identificadorPagina > h1 { /*Ejemplo de Child Combinator*/
+    
+    font-size: 50px;
+    margin-top: 6%;
+}
+
+
+#identificadorPagina  p { /*Ejemplo de selector descendente = Todos los p que están dentro de...*/
+    
+    margin: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: bold;
+
+}
+
+#identificadorPagina a {
+    
+    color: rgb(226 53 42);
+    font-weight: bold;
+    text-decoration: none;
+    
+}
+
+iframe { /*Se aplica este estilo al iframe porque al pasar el código por https://validator.w3.org  se indicó que -framborder="0"- The frameborder attribute on the iframe element is obsolete. Use CSS instead. */
+   
+    border: none;
+}
+
+
+/* Estilos Aplicados al artículo */
+
+
+#question {
+    
+    font-weight: lighter;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 24px;
+    
+}
+
+#extranote {
+    
+    
+  width: 58%;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.6;
+
+}
+
+
+/*Estilos para los enlaces; Sólo aquellos que deben tener imagen añadida al final*/
+
+a[href^="https"]::after { /*Ejemplo de Selectores de atributo + Pseudoelemento para afectar sólo a los indicados*/
+  content: "";
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 0.25em;
+  background-size: 100%;
+  background-image: url("../img/external-link.svg");
+}
+
+
+a[href^="https"]:hover::after { /*Ejemplo de Pseudo Classes User Action + Pseudoelemento para afectar sólo a los indicados*/
+    content: "";
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    margin-left: 0.25em;
+    background-size: 100%;
+    background-image: url("../img/external-link-modif.svg");
+}
+
+
+/*Estilos para Figure y luego meter Vídeos o Imágenes con pie de foto*/
+
+figure {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+
+figcaption {
+  
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+
+
+/*Estilos para las citas dentro del artículo*/
+
+
+.quote {
+
+    max-width: 600px;
+    margin: 2em auto;
+    line-height: 1.6;
+}
+
+.quote p:first-child { /*Ejemplo de Psudo class | Afecta sólo al primer elemento p que esté dentro de quote*/
+    font-family: Georgia,'Times New Roman', serif;
+    font-weight: 700;
+    font-size: 18px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 1em 0;
+    margin: 0;
+}
+
+
+.quote .firma {
+  text-align: right;
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 0.5em;
+}
+
+
+q {
+    font-weight: 700;
+    font-family: Georgia,'Times New Roman', serif;
+    quotes: "«" "»";
+
+}
+
+
+abbr { /**El cursor debe cambiar a un signo de interrogación (cursor: help)*/
+  cursor: help;
+
+}
+
+
+
+/*Estilos para Autor del Artículo*/
+
+.autor {
+    
+    margin: 25px;
+}
+
+.autor > img {
+    
+
+   border-radius: 100px;
+    
+    
+}
+
+.autor > p,
+.autor > figcaption {
+    
+    margin: 0;
+    
+    
+}
+
+
+.fuente {
+    
+    font-size: 13px;
+    
+}
+
+
+/*Estilos para Página de Recursos*/
+
+
+.audio {
+
+    border-style: solid;
+    padding: 5%;
+    border-width: thin;
+    flex-direction: column-reverse;
+    
+}
+
+
+.recursos {
+    
+    margin: 4%;
+}
+
+
+.recursos > li {
+    
+
+    list-style-type: square;
+    font-weight: bold;
+    
+    
+}
+
+.recursos ul > li {
+    
+    list-style-type: circle;
+    margin: 3%;
+    line-height: 10px;
+}
+
+
+/*Estilos para listas de descripción*/
+
+dl {
+    
+        margin: 30px;
+}
+
+
+
+dt {
+    
+    font-weight: bold;
+    font-size: 20px;
+    margin: 14px 0;
+    
+}
+
+dd {
+    
+    margin: 6px;
+    
+}
+
+
+dd > ul > li {
+    
+    list-style-type: square;
+    
+}
+
+
+
+/**Estilos extras para resaltar o agrupar bold + itálicas y utilizarlos en caso de no poder destacar directamente con HTML*/
+
+
+
+.destacado {
+    
+      font-weight: bold;
+      font-style: italic;
+}
+
+
+.negrita {
+    
+      font-weight: bold;
+
+}
+
+
+
+/*Estilos para el Footer*/
+
+footer {
+    
+    background-color: rgb(43, 23, 3);
+
+    
+}
+
+.student {
+    
+    color: white;
+    text-align: center;
+    padding: 1%;
+}
+
+.student p:first-child {
+    
+    font-weight: bold;
+    color: white;
+    margin: unset;
+
+}
+
+
+.student p {
+    
+    color: white;
+    margin: unset;
+    
+}
+
+    
+

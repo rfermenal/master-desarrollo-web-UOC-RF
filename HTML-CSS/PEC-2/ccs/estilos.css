@@ -1,0 +1,684 @@
+/*CSS General PEC 2 | Alumno Roland Fermenal*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap'); /*Aquí importamos la fuente indicada de Google Fonts*/
+
+
+/*Estilo General que aplica a todo el proyecto*/
+
+* {
+    margin: 0; /*Esto quita el margen que los navegadores aplican por defecto al HTML*/
+    /*padding: 0;*/ /*Esto lo he tenido que comentar y es una duda que tengo porque al tenerlo activo las tablas no trabajan como deberían*/
+    
+}
+
+/* Tal como indica la documentación, aquí activamos el modelo de caja alternativo en el elementos html y ajustamos para que otros elementos dentro de la web lo hereden como valor*/
+
+html {
+    
+    box-sizing: border-box; /**Aquí estoy replicando el ejemplo de la documentación de MSDN, pero creo que si aplica al selector universal y aplicaría a todo el documento*/
+    font-family: "Noto Sans", sans-serif;
+}
+
+
+*,
+*::before,
+*::after {
+    
+    box-sizing: inherit;
+}
+
+
+
+body {
+    background:rgb(23 23 23 / 0.1);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: rgb(255 255 255);
+    font-weight: 400;
+
+}
+
+
+
+a {
+    color: rgb(255 255 255);
+    text-decoration: none;
+}
+
+a:hover {
+    
+    color: rgb(218 245 9);
+}
+
+
+
+b, strong {
+    font-weight: 800;
+}
+
+.container {
+    
+    width: 100%;
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.container-Two {
+    
+    width: 100%;
+    max-width: 850px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+
+.complementoP { /*Estilo aplicado al paragraph debajo del nombre del site en index.html*/
+    
+    text-align: center;
+    color: rgb(255 255 255);
+    font-weight: 900;
+    font-size: 40px;
+    margin-top: -50px;
+}
+
+
+/*Estoy metiendo este estilo como parte del div dentro del main en el que está el nombre del site, así generar el espacio que hay debajo de éste en el Mock-up*/
+
+.alto {
+    
+    
+    height: 650px;
+    
+}
+
+/*Estilos para el Menú que hay en index.html*/
+
+.menu-home {
+    
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+
+    
+}
+
+
+/*Estilos para el Menú de las páginas internas*/
+
+.menu-interno {
+    
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+    margin: 10px 0 10px 0;
+    padding: 0;
+    font-size: 18px;
+
+    
+}
+
+
+/*Pseudo clase que aplicamos para lograr el idnicador de li activo en el menú superior de páginas internas*/
+
+.menu-interno li.activo::before {
+    
+    content: "■";
+    position: absolute;
+    color: rgb(218 245 9);
+    margin-top: 20px;
+
+}
+
+
+/*Estilo para logo en index.html*/
+
+
+.logo {
+    background-image: url("../img/isologo-white.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    text-align: center;
+    font-size: 150px;
+    margin-top: 100px;
+    font-weight: 900;
+
+}
+
+
+/*Estilo para logo en Top block de la página interna*/
+
+.logo-interno {
+    background-image: url("../img/isologo-white.svg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    padding-left: 50px;       /* espacio para que la imagen no tape el texto */
+    background-size: contain;
+    font-size: 2em;
+    font-weight: 900;
+
+}
+
+
+.header-interno {
+    
+    background-color: rgb(23 23 23);
+    height: 120px;
+    
+}
+
+
+/*Estilos para background index.html*/
+
+.back {
+    height: 100vh;                               /* ocupa toda la altura del viewport */
+    background-image: url("../img/home-bg.jpg");
+    background-size: cover;                      /* la imagen cubre toda la pantalla */
+    background-position: center;                 /* imagen centrada */
+    background-repeat: no-repeat;
+    background-color: rgb(23 23 23);             /* Se aplica para no perder visiblidad del contenido en caso de que la imagen no se cargue*/   
+}
+
+
+
+/*Estilos para el Footer en index.html*/
+footer {
+    
+        font-size: 1em;
+        width: 100%;
+}
+
+
+.center { /*Centrar listado - Menú inferior del Footer index.html*/
+    
+    text-align: center;
+    justify-content: center;
+    
+
+}
+
+
+/*Estilos para el Footer páginas internas*/
+
+.footer-interno {
+    
+    background-color: rgb(23 23 23);
+
+}
+
+
+
+
+footer ul {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    
+    
+}
+
+footer p {
+    
+   color: rgb(255 255 255);
+    
+}
+
+
+
+/*Los enlaces dentro de los textos son de color negro, sin subrayado y con un borde inferior de estilo dotted del color del texto.*/
+
+li em a{
+    
+    color: rgb(23 23 23);
+    text-decoration: none; /* Quita el subrayado */
+    border-bottom: 1px dotted; /* dotted btm line con color del texto */
+
+}
+
+li em a:hover {
+    
+    border-bottom: 2px solid;
+    
+
+}
+
+.link-articulo {
+    
+    color: rgb(23 23 23);
+    text-decoration: none; /* Quita el subrayado */
+    border-bottom: 1px dotted; /* dotted btm line con color del texto */
+
+}
+
+.link-articulo:hover {
+    
+    border-bottom: 2px solid;
+    
+}
+
+
+.link-source {
+    
+    color: rgb(23 23 23);
+    text-decoration: none; /* Quita el subrayado */
+    border-bottom: 1px dotted; /* dotted btm line con color del texto */
+    
+}
+
+.link-source:hover {
+    
+    border-bottom: 2px solid;
+    
+}
+
+
+/*Punto al lado de los elementos en el Footer = Política de privacidad y Política de cookies*/
+
+footer ul li.bullet::before {
+    content: "•";                   /* el bullet */
+    margin-right: 8px;              /* separación */
+    color: rgb(255 255 255);
+}
+
+
+
+
+/*Estilos para Figure y luego meter Vídeos o Imágenes con pie de foto*/
+
+figure {
+   
+    display: flex;
+    flex-direction: column;
+
+    margin: 20px;
+}
+
+
+figcaption {
+    
+    font-size: 12px;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.source {
+    
+    font-size: 0.8em !important;
+    margin: 30px 0 30px 0 !important;
+    
+}
+
+
+/*Estilos para Cites*/
+
+abbr{
+    
+    cursor: help;
+    text-decoration: none;
+}
+
+
+
+.container-Two h1{                      /*Títulos Artículos*/
+    
+    color: rgb(23 23 23);
+    margin: 12px 0 12px 0;
+    
+}
+ 
+.container-Two h2{                      /*Títulos Artículos*/
+    
+    color: rgb(23 23 23);
+    margin: 12px 0 12px 0;
+    
+}
+
+.container-Two p{
+
+    margin: 30px 0 30px 0;
+    font-size: 1.2em;
+}
+
+
+.container-Two ul li{
+
+    margin: 12px 0 12px 0;
+    font-size: 1.2em;
+}
+
+.black {                                /*Background span*/
+    
+    background-color: rgb(23 23 23);
+    color: rgb(255 255 255)
+    
+}
+
+
+
+
+.ingredientes > li{
+    
+    list-style-type: square;
+    margin: 10px 0 10px 0;
+}
+
+
+.ingredientes > li > ul > li {
+    
+    
+    margin: 5px 0 5px 0;
+    font-size: 1em;
+    
+}
+
+.container > figure img {
+    
+    border-radius: 20px;
+    
+}
+
+
+
+/*Estilos para talleres.html*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid rgb(23 23 23);
+    letter-spacing: 1px;
+    margin: 30px 0 91px 0;
+
+}
+
+th, td {
+    
+    padding: 12px 16px;
+    border: 1px solid rgb(23 23 23);
+    
+}
+
+caption {
+    
+    text-align: center;
+    background-color: rgb(23 23 23 / 0.1);
+    font-size: 2em;
+    border: 1px solid rgb(23 23 23);
+    border-bottom: none;
+    font-weight: 700;
+    padding: 12px 16px;
+    
+    
+}
+
+th {
+    
+
+    font-weight: 700;
+    background-color: rgb(23 23 23 / 0.1);
+    
+}
+
+td[colspan="6"] {
+    
+    font-size: 0.8em;
+}
+
+
+
+.fecha {
+    
+    background-image: url(../img/icon-calendar.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 30px;
+    padding-left: 30px;
+    text-align: left;
+
+}
+
+.cocinero {
+    
+    background-image: url(../img/icon-chef-hat.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 30px;
+    padding-left: 30px;
+    text-align: left;
+
+}
+
+.pais {
+    
+    background-image: url(../img/icon-country.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 30px;
+    padding-left: 30px;
+    text-align: left;
+
+}
+
+
+.actividad {
+    
+    background-image: url(../img/icon-recipe.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 30px;
+    padding-left: 30px;
+    text-align: left;
+
+}
+
+.nivel {
+    
+    background-image: url(../img/icon-level.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 30px;
+    padding-left: 30px;
+    text-align: left;
+
+}
+
+
+.hora {
+    
+    background-image: url(../img/icon-clock.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 30px;
+    padding-left: 30px;
+    text-align: left;
+
+}
+
+
+
+
+
+/*Estilos para Inscripcion.html*/
+
+.red {
+    
+    
+    color: red;
+
+}
+
+form {
+    
+    margin: 20px 0 20px 0;
+    
+}
+
+
+.formset {
+    
+    border: 1px solid rgb(23 23 23);
+    padding: 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+
+    
+}
+
+
+fieldset.grupo {
+
+    gap: 1.5rem 2rem; /* separación entre filas y columnas */
+    margin: 5px 0 30px 0;
+    
+    
+}
+
+
+
+fieldset.grupo div {
+    
+    width: 48%; 
+    display: flex;
+    flex-direction: column;
+    
+}
+
+fieldset input {
+    
+    width: 100%;
+    padding: 0.5rem;
+    
+    
+}
+
+/* inputs dentro del fieldset */
+
+fieldset.grupo input,
+fieldset.grupo select,
+fieldset.grupo textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid rgb(23 23 23);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+fieldset.grupo > div.completo {
+    
+    width: 100%;
+}
+
+fieldset.subgrupo {
+  width: 100%;
+  border: 1px solid rgb(23 23 23);
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;   /* radios uno bajo otro */
+  gap: 0.8rem;              /* separación entre opciones */
+}
+
+fieldset.subgrupo div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;              /* separación entre radio y label */
+}
+
+
+
+/* Sombra verde cuando un campo recibe el foco */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none; /* quita el borde azul del navegador */
+    box-shadow: 0 0 0 3px rgb(218 245 9);
+}
+
+
+input[required]:valid{
+    
+    border: 2px solid #4caf50;
+}
+
+input[required]:not(:placeholder-shown):invalid {
+    border: 2px solid red;
+}
+
+
+
+/*Estilo aplicado a <p></p> con casilla para aceptar protección de datos*/
+.acepto {
+    
+    
+    margin-top: 19px;
+    
+}
+
+/*Estilos para <p></p> con información sobre protección de datos*/
+
+.especial {
+    
+    font-size: 0.8em;
+}
+
+
+
+
+
+
+/* Cada opción (radio + texto) en una sola línea | No me ha funcionado del todo*/
+
+.fieldset-final{
+    border: none;
+}
+
+.selector-final {
+    
+    padding-left: 30px;
+    width: 100% !important;
+    flex-direction: row!important; 
+
+}
+
+
+
+/*Estilos para el botón enviar*/
+
+
+button[type="submit"]{
+    
+    background-color: rgb(218 245 9);
+    border: none;
+    font-size: 1.2em;
+    color: rgb(23 23 23);
+    cursor: pointer;
+    padding: 6px 6px 6px 6px;
+    margin: 20px 0 10px 0px;      
+
+}
+
+
+
+
+
+
+
+
+
+
+

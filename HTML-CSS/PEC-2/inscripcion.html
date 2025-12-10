@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>PEC 2 - Roland Fermenal | Talleres</title>
+        <meta name="description" content="Talleres">
+        <link rel="stylesheet" href="ccs/estilos.css">
+        <link rel="icon" href="img/favicon.png">
+    </head>
+    <body>
+        
+        
+        <header class="header-interno">
+            
+            <nav class="container">
+                <p><a class="logo-interno" href="index.html">descubrir</a></p>
+                <ul class="menu-interno">
+                    <li><a href="articulo-del-mes.html">Artículo del mes</a></li>
+                    <li><a href="talleres.html">Talleres</a></li>
+                    <li class="activo"><a href="inscripcion.html">Inscripción</a></li>
+                
+                </ul>
+            
+            </nav>
+        
+        
+        
+        </header>
+        
+        
+        <main>
+            
+            <div class="container-Two">
+                
+               <h1>Inscripción a los Talleres</h1>
+                
+                
+                <p>Rellene el formulario siguiente para inscribirse en nuestros talleres. Las plazas son limitadas y se confirmarán por orden e inscripción. Una vez recibida la solicitud, contactaremos con usted por correo electrónico para darle todos los detalles del taller y las instrucciones de pago.</p>
+            
+            </div>
+            
+                <div class="container">
+                
+                    <p>Los campos señalados con <span class="red">*</span> son obligatorios.</p>
+                    
+                    <form action="#" method="post">
+                        
+                        <fieldset class="formset grupo">
+                            
+                            <legend>Datos personales</legend>
+                            
+                            <div>
+                                
+                                <label for="nombre">Nombre <span class="red">*</span></label>
+                                
+                                <input type="text" id="nombre" name="nombre" required>
+                                
+                            </div>
+                            
+                            <div>
+                                
+                                <label for="apellidos">Apellidos <span class="red">*</span></label>
+                                
+                                <input type="text" id="apellidos" name="apellidos" required>
+                            
+                            </div>
+                            
+                            <div>
+                                
+                                <label for="email">Correo electrónico <span class="red">*</span></label>
+                                
+                                <input type="email" id="email" name="email" required>
+                            
+                            </div>
+                            
+                            <div>
+                                
+                                 <label for="telefono">Teléfono de contacto <span class="red">*</span></label>
+                                
+                                <input type="tel" id="telefono" name="telefono" required>
+                            
+                            </div>
+                            
+                            <div>
+                                
+                                <label for="fecha-nacimiento">Fecha de nacimiento <span class="red">*</span></label>
+                                
+                                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                                
+                            </div>
+                            
+                            <div>
+                                
+                                <label for="nacionalidad">Nacionalidad <span class="red">*</span></label>
+                                
+                                <input type="text" id="nacionalidad" name="nacionalidad" required>
+                            
+                            </div>
+                        
+                        </fieldset>
+                        
+                        <fieldset class="formset grupo">
+                            
+                            <legend>Información sobre la inscripción</legend>
+                            
+                            <div>
+                                
+                                <label for="nivel-experiencia">Nivel de experiencia culinaria <span class="red">*</span></label>
+                                
+                                <select id="nivel-experiencia" name="nivel-experiencia" required>
+                                    
+                                    <option value="">Seleccione su nivel</option>
+                                    
+                                    <option value="iniciacion">Iniciación</option>
+                                    
+                                    <option value="intermedio">Intermedio</option>
+                                   
+                                    <option value="avanzado">Avanzado</option>
+                                
+                                </select>
+                            
+                            </div>
+                            
+                            <div>
+                                
+                                <label for="idioma">Idioma preferido del taller <span class="red">*</span></label>
+                                
+                                <select id="idioma" name="idioma" required>
+                                    
+                                    <option value="">Seleccione un idioma</option>
+                                    
+                                    <option value="es">Español</option>
+                                    
+                                    <option value="en">Inglés</option>
+                                    
+                                    <option value="fr">Francés</option>
+                                
+                                </select>
+                            
+                            </div>
+                            
+                            <div>
+                                
+                                <label for="taller">Seleccione un taller <span class="red">*</span></label>
+                                
+                                <select id="taller" name="taller" required>
+                                    
+                                    <option value="">Seleccione un taller</option>
+                                    
+                                    <option value="ramen">Ramen de invierno</option>
+                                    
+                                    <option value="navidad">Cocina de Navidad</option>
+                                    
+                                    <option value="dulces">Dulces para las fiestas</option>
+                                
+                                </select>
+                            
+                            </div>
+                        
+                        </fieldset>
+                        
+                        <fieldset class="formset grupo">
+                            
+                            <legend>Proponga un nuevo taller</legend>
+                            
+                            <p>Si tiene alguna idea para un nuevo taller, explíquenosla.</p>
+                            
+                            <div class="completo">
+                                
+                                <label for="titulo-taller">Título o tema del taller</label>
+                                
+                                <input type="text" id="titulo-taller" name="titulo-taller">
+                            
+                            </div>
+                            
+                            <div class="completo">
+                                
+                                <label for="descripcion">Descripción breve de la propuesta</label>
+                                
+                                <textarea id="descripcion" name="descripcion" rows="5" placeholder="Explique qué le gustaría aprender o compartir en este taller..."> </textarea>
+                            
+                            </div>
+                            
+                            <div class="completo">
+                                
+                                <label for="pais-origen">País o región de origen</label>
+                                
+                                <input type="text" id="pais-origen" name="pais-origen" placeholder="Ejemplo: Vietnam, Mediterráneo, Argentina...">
+                            
+                            </div>
+                            
+                            <div class="completo">
+                                
+                                <label for="chef-contacto">¿Conoce a algún chef o persona que podría impartirlo?</label>
+                                
+                                <input type="text" id="chef-contacto" name="chef-contacto">
+                            
+                            </div>
+                            
+                            <fieldset class="fieldset-final">
+                            
+                                                    
+                                <legend>Nivel de dificultad propuesto</legend>
+                                
+                                <div class="selector-final">
+                                    
+                                    
+                                    <input type="radio" id="dif-iniciacion" name="nivel-dificultad" value="iniciacion">
+                                    <label for="dif-iniciacion">Iniciación</label>
+                                    
+   
+                                </div>
+                                
+                                <div class="selector-final">
+                                    
+                                    <input type="radio" id="dif-intermedio" name="nivel-dificultad" value="intermedio">
+                                    <label for="dif-intermedio">Intermedio</label>
+                                    
+  
+                                </div>
+                                
+                                <div class="selector-final">
+                                    
+                                    
+                                    <input type="radio" id="dif-avanzado" name="nivel-dificultad" value="avanzado">
+                                    <label for="dif-avanzado">Avanzado</label>
+                                    
+
+                                </div>
+
+                            </fieldset>
+  
+                               
+                                
+                       
+                            
+                        </fieldset>
+                        
+                        <p class="especial">INFORMACIÓN SOBRE PROTECCIÓN DE DATOS DE DESCUBRIR. <b>Finalidades</b>: recogida de datos para la inscripción en los talleres de Descubrir. <b>Legitimación</b>: consentimiento del interesado. Destinatarios: no están previstas cesiones de datos a terceros, salvo por obligación legal. <b>Derechos</b>: puede retirar su consentimiento en cualquier momento, así como acceder, rectificar, suprimir sus datos y otros derechos dirigiéndose a <a class="link-articulo" href="mailto:info@descubrir.eu?subject=Retiro%20mi%20consentimiento">info@descubrir.eu</a>. <b>Información adicional</b>: puede ampliar la información en el enlace de <a class="link-articulo" href="">Aviso Legal</a> y <a class="link-articulo" href="">Política de privacidad</a>.
+                        </p>
+                        
+                        <div class="acepto">
+                            
+                            <input type="checkbox" id="acepto" name="acepto" required>
+                            
+                            <label class="acepto" for="acepto">He leído y acepto la política de privacidad <span class="red">*</span></label>
+                        
+                        </div>
+                        
+                        <div>
+                            <button type="submit">Inscribirme</button>
+                        
+                        </div>
+                    
+                    </form>
+
+               
+                
+                
+            </div>
+            
+
+        
+        </main>
+        
+        <footer class="footer-interno">
+            
+            <div class="container">
+                
+                <p><abbr title="Universitat Oberta de Catalunya">UOC</abbr>. Diciembre 2025. Roland Fermenal</p>
+                        
+                <ul>
+                    <li><a href="">Aviso Legal</a></li>
+                    <li class="bullet"><a href="">Política de privacidad</a></li>
+                    <li class="bullet"><a href="">Política de cookies</a></li>
+                </ul>
+
+            
+            </div>
+
+        
+        </footer>
+        
+       
+    </body>
+</html>
